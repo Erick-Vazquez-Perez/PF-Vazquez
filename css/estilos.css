@@ -51,6 +51,12 @@ body{
     color: #fff;
 }
 
+.textos-hero img{
+    width: 12rem;
+    height: 5rem;
+    margin-bottom: 20px;
+}
+
 .svg-hero{
     position: absolute;
     bottom: 0;
