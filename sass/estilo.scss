@@ -1,0 +1,175 @@
+// Definición de variables
+$font-primary: 'Raleway', sans-serif;
+$background-hero: linear-gradient(120deg, rgba(147, 183, 251, 0.699) 0%, rgba(66, 78, 253, 0.692) 100%), url("../img/header.jpg");
+$button-background: #035bff;
+$button-background-gradient: linear-gradient(45deg, #9ab2ff 0%, #0a0188 99%, #0066ff 100%);
+$info-background: #4061f1;
+$card-hover-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+$footer-background: #254bf1;
+$input-border-color: #fff;
+
+// Reseteo básico y estilos generales
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-primary;
+}
+
+// Hero
+.hero {
+  background: $background-hero;
+  width: 100%;
+  height: 470px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+
+  .textos-hero {
+    height: 350px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      font-size: 60px;
+    }
+
+    p {
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+
+    a {
+      display: inline-block;
+      text-decoration: none;
+      padding: 12px 15px;
+      background: $button-background;
+      border-radius: 8px;
+      color: #fff;
+    }
+
+    img {
+      width: 12rem;
+      height: 5rem;
+      margin-bottom: 20px;
+    }
+  }
+
+  .svg-hero {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+
+// Estilos generales
+.contenedor,
+.wave-contenedor {
+  width: 90%;
+  max-width: 1000px;
+  overflow: hidden;
+  margin: auto;
+  padding: 0 0 80px 0;
+
+  &.contenedor {
+    padding: 80px 0;
+  }
+}
+
+.titulo {
+  font-weight: 300;
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 30px;
+
+  &.left {
+    text-align: left;
+  }
+
+  &.right {
+    text-align: right;
+  }
+}
+
+// Sección website
+.website {
+  display: flex;
+  justify-content: space-between;
+
+  img {
+    width: 48%;
+  }
+
+  .contenedor-textos-main {
+    width: 40%;
+  }
+
+  .parrafo {
+    text-align: justify;
+    margin-bottom: 20px;
+  }
+
+  .cta {
+    display: inline-block;
+    text-decoration: none;
+    background: $button-background-gradient;
+    padding: 12px 15px;
+    border-radius: 8px;
+    color: #fff;
+  }
+}
+
+// Info
+.info {
+  background: $info-background;
+  color: #fff;
+}
+
+// Cards
+.content-cards {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  .card {
+    width: 30%;
+    text-align: center;
+    height: 300px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, .5);
+    transition: transform 0.6s;
+
+    &:hover {
+      box-shadow: $card-hover-shadow;
+      transform: scale(1.03);
+      cursor: pointer;
+    }
+
+    i {
+      margin: 30px 0 20px 0;
+      color: #647fca;
+      font-size: 50px;
+    }
+
+    p {
+      font-weight: 300;
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
